@@ -15,7 +15,10 @@
     <input type="text" name="characters" placeholder="Input characters" required />
     <input type="submit" value="Convert" />
   </form>
-  {% if result %}
-  <div class="result">{{ result }}</div>
-  {% endif %}
+  {% if simp_pinyin and trad_zhuyin %}
+  <div class="result">
+    Simplified with Pinyin: {{ simp_pinyin|safe }}
+    Traditional with Zhuyin: {{ trad_zhuyin|safe }}
+</div>
+{% endif %}
 </body>
